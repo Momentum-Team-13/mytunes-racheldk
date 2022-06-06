@@ -1,20 +1,39 @@
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #ced4da;
+}
+
 .resultBox {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 4px double salmon;
-    background-color: bisque;
+    /* background-color: #e9ecef; */
+    /* border: 1px solid #53687E; */
 }
 
 .songCard {
     flex-wrap: wrap;
     padding: 10px;
-    border: 1px solid lightslategray;
+    border: 1px solid #53687E;
     border-radius: 5px;
     justify-content: center;
     margin: 15px;
+    background-color: #f8f9fa;
+    /* background-color: #dee2e6; */
+}
+
+.title {
+    flex-wrap: nowrap;
+}
+
+.album {
+
+}
+
+.artist {
+
 }
 
 audio {

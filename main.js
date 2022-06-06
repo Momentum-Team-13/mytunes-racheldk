@@ -45,6 +45,12 @@ let resultBox = document.querySelector(".resultBox");
     title.innerText = `${song.trackName}`;
     songCard.appendChild(title);
     // console.log(title);
+
+    // let album = document.createElement('div');
+    // album.classList.add("album");
+    // album.innerText = `${song.collectionName}`;
+    // songCard.appendChild(album);
+    // console.log(album)
     
     let artist = document.createElement("div");
     artist.classList.add("artist");
