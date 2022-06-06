@@ -1,0 +1,23 @@
+.resultBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.trackCard {
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid lightslategray;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+audio {
+    margin: 0 auto;
+    display: block;
+}
+
+img {
+    width: 100px;
+}

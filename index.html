@@ -9,21 +9,20 @@
   </head>
   <body>
     <h1>MyTunes</h1>
-    <audio controls src="">
+    <audio controls src="https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/dd/9f/a1/dd9fa143-895c-b2ab-3051-abc746a17a97/mzaf_3979078444986209553.plus.aac.p.m4a">
       Your browser does not support the <code>audio</code> element.
     </audio>
-    <p>Now Playing: song by artist</p>
-    <!-- search bar -->
-    <button>Search</button>
+    <div>Now Playing: song by artist</div>
+    <input type="text" id="searchBar">
+    <button id="searchButton">Search</button>
 
-    <div>
-      Search Results:
-      <div>
-        <img src="" alt="" />
-        <p id="song_title"></p>
-        <p id="artist"></p>
+    <p>Search Results:</p>  
+    <div class="resultBox">
+      <div class="trackCard">
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/72/3e/83/723e83ab-faf1-be9c-5389-0ab4ec72d8e4/655173104620.jpg/100x100bb.jpg" alt="album artwork">
+        <div id="trackName">Always Love</div>
+        <div id="artistName">Nada Surf</div>
       </div>
     </div>
-    //and then the stuff pops up here
   </body>
 </html>
