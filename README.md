@@ -16,13 +16,14 @@ Here are the steps you'll need to take in order to complete this project.
 ## Product Requirements
 
 - A user can search for songs by artist or band name.
-- Validate the input so that a search request is not sent with no search term.
+x Validate the input so that a search request is not sent with no search term.
 - Display the search results without reloading the page.
-- The results should include song details. You must include the song title, but the data you'll get back from the API has other info you can consider including, like artist name, album title, album image, and release date.
-- The number of results you show is up to you. If no results are returned from a search, your UI should communicate this to the user in a clear way (how you do this is up to you).
-- You should handle responses from the server that are not in the 200 range in your javascript and also in your UI (for instance, you can show an error message and ask the user to repeat their search).
+x The results should include song details. You must include the song title, but the data you'll get back from the API has other info you can consider including, like artist name, album title, album image, and release date.
+- The number of results you show is up to you. 
+- If no results are returned from a search, your UI should communicate this to the user in a clear way (how you do this is up to you). (***check if there are 0 results and then display no results)
+??? - You should handle responses from the server that are not in the 200 range in your javascript and also in your UI (for instance, you can show an error message and ask the user to repeat their search).
 - Allow the user to click on a song title to play a song preview.
-- Your application should be nicely styled, with thought given to the user experience (that is, it should be easy for your user to interact with).
+x Your application should be nicely styled, with thought given to the user experience (that is, it should be easy for your user to interact with).
 
 ### Setup with `npm`
 

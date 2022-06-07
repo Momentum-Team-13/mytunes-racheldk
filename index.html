@@ -16,16 +16,15 @@
       Your browser does not support the <code>audio</code> element.
     </audio>
     <div id="now">Now Playing: song by artist</div>
-    <!-- put the form here -->
-    <div class="search">
-    <input type="text" id="searchBar">
-    <button id="searchButton">Search</button>
-    </div>
-
+    
+      <form class="search" id="myForm">
+        <label for="search"></label>
+        <input type="text" name="searchBar" id="searchBar" placeholder="search by artist" required>
+        <button type="submit" name="search" id="searchButton" class="submit">Search</button>
+      </form>
+        
     <hr class="break">
 
-  
-    <div class="resultBox">
-    </div>
+    <div class="resultBox"></div>
   </body>
 </html>
