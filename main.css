@@ -87,3 +87,12 @@ hr{
 .search {
     margin: 25px;
 }
+
+.noResults {
+    padding: 10px;
+    border: 1px solid #53687E;
+    border-radius: 5px;
+    justify-items: center;
+    margin: 15px;
+    background-color: #f8f9fa;
+}
