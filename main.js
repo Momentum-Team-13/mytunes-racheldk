@@ -14,12 +14,10 @@ form.addEventListener("submit", function (event) {
     resultBox.innerHTML = "";
     event.preventDefault();
     getResults(inputField.value);
-    // console.log(inputField.value);
-    const searchTypeArray = document.getElementById("searchType").options;
-    let selectedType = searchTypeArray.options.
-    console.log(`selectedType: ${selectedType}`)
-    console.log(searchType)
-    console.log (`searchType: ${searchType.value} has this many objects ${searchType.length}`)
+
+    console.log(`searchType: ${searchType.value}`)
+
+    
 });
 
 
