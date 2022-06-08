@@ -3,6 +3,7 @@ let resultBox = document.querySelector(".resultBox");
 const form = document.querySelector("#myForm");
 const inputField = document.querySelector("#searchBar");
 const player = document.querySelector("#audioPlayer");
+player.volume = 0.5;
 const now = document.querySelector("#now");
 
 form.addEventListener("submit", function (event) {
@@ -51,6 +52,7 @@ function song(results) {
 function addSong(song) {
     let songCard = document.createElement("div");
     songCard.classList.add("songCard");
+
     let artwork = document.createElement("img");
     artwork.classList.add("artwork");
     artwork.src = song.artworkUrl100;
@@ -77,17 +79,15 @@ function addSong(song) {
 
 resultBox.addEventListener("click", function (event) {
     let target = event.target;
-    console.log(target);
-    console.log(target.parentElement);
-    if (target.parentElement.classList.contains("songCard")) {
-        console.log(target.parentElement.children);
-        player.src = target.parentElement.children[2].innerText;
-        now.innerText = `Now Playing: ${target.parentElement.children[1].innerText} by ${target.parentElement.children[3].innerText}`;
-        console.log("now playing updated");
-    } else if (target.classList.contains("songCard")) {
+    if (target.classList.contains("songCard")) {
         console.log("target.classList");
         player.src = target.children[2].innerText;
         now.innerText = `Now Playing: ${target.children[1].innerText} by ${target.children[3].innerText}`;
+        console.log("now playing updated");
+    } else if (target.parentElement.classList.contains("songCard")) {
+        console.log(target.parentElement.children);
+        player.src = target.parentElement.children[2].innerText;
+        now.innerText = `Now Playing: ${target.parentElement.children[1].innerText} by ${target.parentElement.children[3].innerText}`;
         console.log("now playing updated");
     }
 });
