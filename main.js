@@ -5,24 +5,34 @@ const inputField = document.querySelector("#searchBar");
 const player = document.querySelector("#audioPlayer");
 player.volume = 0.5;
 const now = document.querySelector("#now");
-const typeAll = document.querySelector("#searchType").options.item(0).text;
-const typeArtist = document.querySelector("#searchType").options.item(1).text;
-const typeSong = document.querySelector("#searchType").options.item(2).text;
-const typeAlbum = document.querySelector("#searchType").options.item(3).text;
+// const typeAll = document.querySelector("#searchType").options.item(0).text;
+// const typeArtist = document.querySelector("#searchType").options.item(1).text;
+// const typeSong = document.querySelector("#searchType").options.item(2).text;
+// const typeAlbum = document.querySelector("#searchType").options.item(3).text;
 
 form.addEventListener("submit", function (event) {
     resultBox.innerHTML = "";
     event.preventDefault();
     getResults(inputField.value);
-    console.log(inputField.value);
+    // console.log(inputField.value);
+    const searchTypeArray = document.getElementById("searchType").options;
+    let selectedType = searchTypeArray.options.
+    console.log(`selectedType: ${selectedType}`)
+    console.log(searchType)
+    console.log (`searchType: ${searchType.value} has this many objects ${searchType.length}`)
 });
+
+
+// function adjustUrl (term) {
+//     let
+// }
 
 function getResults(term) {
     let url = `https://itunes.apple.com/search?term=${term.replaceAll(
         " ",
         "+"
     )}&entity=song`;
-    console.log(url);
+    // console.log(url);
     fetch(url, {
         method: "GET",
         headers: { "Content-Type": "application/JSON" },
@@ -47,6 +57,7 @@ function getResults(term) {
             }
         });
 }
+
 function song(results) {
     for (let song of results) {
         resultBox.appendChild(addSong(song));
