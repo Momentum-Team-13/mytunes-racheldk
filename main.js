@@ -5,32 +5,35 @@ const inputField = document.querySelector("#searchBar");
 const player = document.querySelector("#audioPlayer");
 player.volume = 0.5;
 const now = document.querySelector("#now");
-// const typeAll = document.querySelector("#searchType").options.item(0).text;
-// const typeArtist = document.querySelector("#searchType").options.item(1).text;
-// const typeSong = document.querySelector("#searchType").options.item(2).text;
-// const typeAlbum = document.querySelector("#searchType").options.item(3).text;
 
 form.addEventListener("submit", function (event) {
     resultBox.innerHTML = "";
     event.preventDefault();
-    getResults(inputField.value);
+    getResults(searchType.value, inputField.value);
 
-    console.log(`searchType: ${searchType.value}`)
-
-    
+    console.log(`searchType: ${searchType.value}`);
+    return searchType.value;
 });
 
 
-// function adjustUrl (term) {
-//     let
-// }
+function getResults(type, term) {
+   let url = `https://itunes.apple.com/search?term=${term}&entity=song`;
+    
+    if (type === "artist") {
+        url = `https://itunes.apple.com/search?term=${term}&entity=song&attribute=allArtistTerm`;
+        console.log(`if artist`);
+    } else if (type === "song") {
+        url = `https://itunes.apple.com/search?term=${term}&entity=song&attribute=songTerm`;
+        console.log (`if song`);
+    } else if (type === "album") {
+        url = `https://itunes.apple.com/search?term=${term}&entity=song&attribute=albumTerm`;
+        console.log(`if album`);
+    } else {
+        url = `https://itunes.apple.com/search?term=${term}&entity=song`;
+        console.log('if all')
+    } 
+    
 
-function getResults(term) {
-    let url = `https://itunes.apple.com/search?term=${term.replaceAll(
-        " ",
-        "+"
-    )}&entity=song`;
-    // console.log(url);
     fetch(url, {
         method: "GET",
         headers: { "Content-Type": "application/JSON" },
