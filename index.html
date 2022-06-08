@@ -18,6 +18,13 @@
     <div id="now"></div>
     
       <form class="search" id="myForm">
+        <!-- trying drop down -->
+        <select name="searchType" id="searchType">
+          <option value="all" selected>All</option>
+          <option value="artist">Artist</option>
+          <option value="song">Song</option>
+          <option value="album">Album</option>
+        </select>
         <label for="search"></label>
         <input type="text" name="searchBar" id="searchBar" placeholder="search" required>
         <button type="submit" name="search" id="searchButton" class="submit">Search</button>

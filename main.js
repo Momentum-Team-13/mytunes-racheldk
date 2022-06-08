@@ -5,6 +5,10 @@ const inputField = document.querySelector("#searchBar");
 const player = document.querySelector("#audioPlayer");
 player.volume = 0.5;
 const now = document.querySelector("#now");
+const typeAll = document.querySelector("#searchType").options.item(0).text;
+const typeArtist = document.querySelector("#searchType").options.item(1).text;
+const typeSong = document.querySelector("#searchType").options.item(2).text;
+const typeAlbum = document.querySelector("#searchType").options.item(3).text;
 
 form.addEventListener("submit", function (event) {
     resultBox.innerHTML = "";
