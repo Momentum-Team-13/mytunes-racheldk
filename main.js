@@ -84,6 +84,11 @@ function addSong(song) {
     audioSource.classList.add("audio");
     audioSource.innerText = `${song.previewUrl}`;
     songCard.appendChild(audioSource);
+    
+    let albumTitle = document.createElement('div');
+    albumTitle.classList.add("album");
+    albumTitle.innerText = song.collectionName;
+    songCard.appendChild(albumTitle);
 
     let artist = document.createElement("div");
     artist.classList.add("artist");
@@ -98,12 +103,12 @@ resultBox.addEventListener("click", function (event) {
     if (target.classList.contains("songCard")) {
         console.log("target.classList");
         player.src = target.children[2].innerText;
-        now.innerText = `Now Playing: ${target.children[1].innerText} by ${target.children[3].innerText}`;
+        now.innerText = `Now Playing: ${target.children[1].innerText} by ${target.children[4].innerText}`;
         console.log("now playing updated");
     } else if (target.parentElement.classList.contains("songCard")) {
         console.log(target.parentElement.children);
         player.src = target.parentElement.children[2].innerText;
-        now.innerText = `Now Playing: ${target.parentElement.children[1].innerText} by ${target.parentElement.children[3].innerText}`;
+        now.innerText = `Now Playing: ${target.parentElement.children[1].innerText} by ${target.parentElement.children[4].innerText}`;
         console.log("now playing updated");
     }
 });
