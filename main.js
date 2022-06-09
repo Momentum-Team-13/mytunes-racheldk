@@ -41,7 +41,6 @@ function getResults(type, term) {
             console.log(data.results);
             song(data.results);
             if (data.results.length === 0) {
-                console.log("no results found");
                 let noResults = document.createElement("div");
                 noResults.classList.add("noResults");
                 noResults.innerText = `No results found`;
@@ -92,14 +91,11 @@ function addSong(song) {
 resultBox.addEventListener("click", function (event) {
     let target = event.target;
     if (target.classList.contains("songCard")) {
-        console.log("target.classList");
         player.src = target.children[2].innerText;
         now.innerText = `Now Playing: ${target.children[1].innerText} by ${target.children[4].innerText}`;
         console.log("now playing updated");
     } else if (target.parentElement.classList.contains("songCard")) {
-        console.log(target.parentElement.children);
         player.src = target.parentElement.children[2].innerText;
         now.innerText = `Now Playing: ${target.parentElement.children[1].innerText} by ${target.parentElement.children[4].innerText}`;
-        console.log("now playing updated");
     }
 });
