@@ -10,29 +10,20 @@ form.addEventListener("submit", function (event) {
     resultBox.innerHTML = "";
     event.preventDefault();
     getResults(searchType.value, inputField.value);
-
-    console.log(`searchType: ${searchType.value}`);
-    return searchType.value;
 });
 
-
 function getResults(type, term) {
-   let url = `https://itunes.apple.com/search?term=${term}&entity=song`;
-    
+    let url = `https://itunes.apple.com/search?term=${term}&entity=song`;
+
     if (type === "artist") {
         url = `https://itunes.apple.com/search?term=${term}&entity=song&attribute=allArtistTerm`;
-        console.log(`if artist`);
     } else if (type === "song") {
         url = `https://itunes.apple.com/search?term=${term}&entity=song&attribute=songTerm`;
-        console.log (`if song`);
     } else if (type === "album") {
         url = `https://itunes.apple.com/search?term=${term}&entity=song&attribute=albumTerm`;
-        console.log(`if album`);
     } else {
         url = `https://itunes.apple.com/search?term=${term}&entity=song`;
-        console.log('if all')
-    } 
-    
+    }
 
     fetch(url, {
         method: "GET",
@@ -84,8 +75,8 @@ function addSong(song) {
     audioSource.classList.add("audio");
     audioSource.innerText = `${song.previewUrl}`;
     songCard.appendChild(audioSource);
-    
-    let albumTitle = document.createElement('div');
+
+    let albumTitle = document.createElement("div");
     albumTitle.classList.add("album");
     albumTitle.innerText = song.collectionName;
     songCard.appendChild(albumTitle);

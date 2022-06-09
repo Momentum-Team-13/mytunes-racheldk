@@ -2,7 +2,6 @@ body {
     font-family: "Inter", sans-serif;
     background-color: #dee2e6;
     color: #212529;
-   
 }
 
 .resultBox {
@@ -27,12 +26,10 @@ body {
 
 .title {
     overflow: auto;
-    /* padding: 5px; */
     font-weight: 400;
     font-size: 12px;
     text-align: center;
     height: 2rem;
-    /* border: 1px solid red; */
 }
 
 .album {
@@ -42,7 +39,6 @@ body {
     font-size: 12px;
     text-align: center;
     height: 1.5rem;
-    /* border: 1px solid blue; */
 }
 
 .artist {
@@ -52,7 +48,6 @@ body {
     text-align: center;
     overflow: auto;
     height: 1.25rem;
-    /* border: 1px solid green; */
 }
 
 .audio {
@@ -66,7 +61,6 @@ audio {
 
 img {
     width: 114px;
-    /* padding:5px; */
     margin: 10px 24px;
 }
 
@@ -95,12 +89,12 @@ hr{
 }
 
 .search {
-    margin: 25px;
+    margin: 45px 25px 15px 25px;
 }
 
 .noResults {
     padding: 10px;
-    border: 1px solid #53687E;
+    border: 1px solid purple;
     border-radius: 5px;
     justify-items: center;
     margin: 15px;
