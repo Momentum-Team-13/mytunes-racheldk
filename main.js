@@ -93,7 +93,6 @@ resultBox.addEventListener("click", function (event) {
     if (target.classList.contains("songCard")) {
         player.src = target.children[2].innerText;
         now.innerText = `Now Playing: ${target.children[1].innerText} by ${target.children[4].innerText}`;
-        console.log("now playing updated");
     } else if (target.parentElement.classList.contains("songCard")) {
         player.src = target.parentElement.children[2].innerText;
         now.innerText = `Now Playing: ${target.parentElement.children[1].innerText} by ${target.parentElement.children[4].innerText}`;
