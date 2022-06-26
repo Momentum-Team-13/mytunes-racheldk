@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="main.js" defer></script>
-  <title>Music Search</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
+    <title>Music Search</title>
+  </head>
+  <body>
+    <h1>MyTunes</h1>
+    <audio controls  src="" id="audioPlayer">
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <div id="now"></div>
+    
+      <form class="search" id="myForm">
+      
+        <select name="searchType" id="searchType">
+          <option value="all" selected>All</option>
+          <option value="artist">Artist</option>
+          <option value="song">Song</option>
+          <option value="album">Album</option>
+        </select>
+
+        <label for="search"></label>
+        <input type="text" name="searchBar" id="searchBar" placeholder="search" required>
+        <button type="submit" name="search" id="searchButton" class="submit">Search</button>
+      </form>
+        
+    <hr class="break">
+
+    <div class="resultBox"></div>
+  </body>
 </html>
